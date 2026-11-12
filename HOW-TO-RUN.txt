@@ -1,0 +1,30 @@
+==================================================
+AI MUSIC DISCOVERY — YOUR PERSONAL AI DJ
+PRE-ASSEMBLED STANDALONE PACKAGE
+==================================================
+
+This package is completely pre-assembled:
+- The React + TypeScript frontend is ALREADY built into `frontend/dist/`.
+- You do NOT need Node.js or npm!
+- You only need Python 3.11+ installed.
+
+HOW TO RUN:
+
+ON WINDOWS:
+  1. Double-click `start.bat`.
+  2. It will automatically install requirements into a local virtual environment (.venv) and open http://localhost:3000 in your browser!
+
+ON MAC OR LINUX:
+  1. Open terminal inside this folder.
+  2. Run:
+       chmod +x start.sh
+       ./start.sh
+  3. It will automatically set up .venv, start the server, and open http://localhost:3000 in your browser!
+
+WITH DOCKER (ANY OS):
+  Run:
+       docker compose up --build
+  Then open:
+       http://localhost:3000
+
+ENJOY DISCOVERING MUSIC!
