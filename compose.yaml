@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      APP_ENV: production
+      DATABASE_PATH: /app/data/music.sqlite3
+      # false allows local HTTP. Real deployments must terminate TLS and set true.
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      EXTERNAL_APIS_ENABLED: ${EXTERNAL_APIS_ENABLED:-true}
+      ITUNES_COUNTRY: ${ITUNES_COUNTRY:-ro}
+      MUSICBRAINZ_USER_AGENT: ${MUSICBRAINZ_USER_AGENT:-AI-Music-Discovery/1.0 (https://github.com/scrieorice123456-ctrl/ai-music-discovery)}
+    volumes:
+      - music-data:/app/data
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  music-data:

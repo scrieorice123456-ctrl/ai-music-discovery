@@ -1,0 +1,17 @@
+.git
+.env
+.env.*
+!.env.example
+.venv
+.cache
+**/node_modules
+**/__pycache__
+.pytest_cache
+data
+uploads
+**/*.sqlite*
+**/*.db*
+frontend/dist
+test-results
+playwright-report
+Unselected files

@@ -1,0 +1,23 @@
+{
+  "name": "ai-music-discovery",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A local-first personal music discovery DJ",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:frontend": "npm --prefix frontend run dev -- --host 0.0.0.0",
+    "build": "npm --prefix frontend run build",
+    "test": ".venv/bin/python -m pytest backend/tests -q",
+    "typecheck": "npm --prefix frontend run typecheck",
+    "test:e2e": "playwright test",
+    "start": ".venv/bin/python -m uvicorn backend.app.main:app --host 0.0.0.0 --port 3000",
+    "format": "prettier --write \"frontend/src/**/*.{ts,tsx,css}\" \"scripts/*.mjs\" \"tests/e2e/*.ts\" playwright.config.mjs",
+    "format:check": "prettier --check \"frontend/src/**/*.{ts,tsx,css}\" \"scripts/*.mjs\" \"tests/e2e/*.ts\" playwright.config.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.56.1",
+    "@sparticuz/chromium": "^153.0.0",
+    "prettier": "^3.10.0"
+  }
+}
